@@ -18,7 +18,7 @@ phases:
         - export KUBECONFIG=$HOME/.kube/config
   build:
     commands:
-      - docker build --tag $REPOSITORY_URI:$TAG .
+      - docker build --tag $REPOSITORY_URI:$TAG -f ./app/Dockerfile ./app
 
   post_build:
     commands:
@@ -36,5 +36,5 @@ phases:
 artifacts:
   files: build.json
 env:
-  parameter-store:         
+  parameter-store:
     JWT_SECRET: JWT_SECRET
