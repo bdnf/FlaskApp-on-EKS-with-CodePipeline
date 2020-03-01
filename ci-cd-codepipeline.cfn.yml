@@ -15,7 +15,8 @@ Parameters:
 
   GitSourceRepo:
     Type: String
-    Description: GitHub source repository - must contain buildspec.yml in the base
+    Description: GitHub source repository - must contain buildspec.yml in the base. Defaul name is origin repo name
+    Default: FlaskApp-on-EKS-with-CodePipeline
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub repository name
